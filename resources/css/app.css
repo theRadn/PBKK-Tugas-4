@@ -1,7 +1,12 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
+
+@import "@fontsource-variable/inter";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
 
 @theme inline {
     --font-sans:
@@ -22,4 +27,5 @@
     --color-its-blue: #002B66;
     --color-its-accent: #0055B8;
     --color-its-light: #E6EEF8;
+    --font-sans: 'Inter Variable', sans-serif;
 }

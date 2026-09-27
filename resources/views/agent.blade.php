@@ -1,8 +1,6 @@
-<x-layout>
+@extends('layouts.app')
 
-    <!-- Navbar -->
-    @include('partials.navbar')
-
+@section('content')
     @php
         // Normalize tema input for reliable matching
         $rawTema = urldecode($tema ?? '');
@@ -63,7 +61,7 @@
                 </div>
 
                 @if(!$isDefault)
-                    <a href="{{ route('agent.idea', ['tema' => 'general assistant agent']) }}" 
+                    <a href="{{ route('agent.idea', ['tema' => 'general assistant agent']) }}"
                        class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-slate-200 text-slate-700 text-xs font-semibold hover:border-its-accent hover:text-its-accent shadow-sm transition">
                         <i class="fa-solid fa-rotate-left"></i> Load Default Spec
                     </a>
@@ -194,7 +192,7 @@
                         </div>
                     </div>
 
-                    <a href="{{ route('agent.idea', ['tema' => 'general assistant agent']) }}" 
+                    <a href="{{ route('agent.idea', ['tema' => 'general assistant agent']) }}"
                        class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-its-accent hover:bg-its-blue text-white font-semibold text-sm shadow-md shadow-blue-500/20 transition duration-200">
                         <i class="fa-solid fa-robot"></i> Switch to General Assistant Agent
                     </a>
@@ -204,8 +202,4 @@
 
         </div>
     </section>
-
-    <!-- Footer -->
-    @include('partials.footer')
-
-</x-layout>
+@endsection

@@ -68,7 +68,6 @@ $members = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Department Profile - ITS Academic Profile</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .bg-grid-pattern {
             background-size: 40px 40px;

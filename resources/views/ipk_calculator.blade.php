@@ -1,8 +1,6 @@
-<x-layout>
+@extends('layouts.app')
 
-    <!-- Navbar -->
-    @include('partials.navbar')
-
+@section('content')
     <!-- Hero / Calculator Section -->
     <section class="relative bg-gradient-to-b from-blue-50/50 via-white to-slate-50 py-12 lg:py-20">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,7 +18,7 @@
 
             <!-- Main Calculator Card -->
             <div class="bg-white border border-slate-200/80 rounded-2xl p-6 sm:p-10 shadow-sm">
-                
+
                 <!-- Error Alert (Handles server routes & dynamic frontend validation) -->
                 <div id="error-container" class="{{ !empty($initialError) ? '' : 'hidden' }} mb-6 p-4 rounded-xl bg-red-50 border border-red-200 text-red-700 text-sm flex items-center gap-3">
                     <i class="fa-solid fa-triangle-exclamation text-base text-red-500 shrink-0"></i>
@@ -28,10 +26,10 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-                    
+
                     <!-- Input Form Column -->
                     <div class="md:col-span-7 space-y-5">
-                        
+
                         <!-- IP Semester 1 -->
                         <div>
                             <label for="ip1" class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">
@@ -41,11 +39,11 @@
                                 <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
                                     <i class="fa-solid fa-chart-line text-sm"></i>
                                 </div>
-                                <input 
-                                    type="text" 
+                                <input
+                                    type="text"
                                     inputmode="decimal"
-                                    id="ip1" 
-                                    name="ip1" 
+                                    id="ip1"
+                                    name="ip1"
                                     maxlength="5"
                                     value="{{ $initialIP1 }}"
                                     placeholder="e.g. 3.75"
@@ -63,11 +61,11 @@
                                 <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
                                     <i class="fa-solid fa-chart-line text-sm"></i>
                                 </div>
-                                <input 
-                                    type="text" 
+                                <input
+                                    type="text"
                                     inputmode="decimal"
-                                    id="ip2" 
-                                    name="ip2" 
+                                    id="ip2"
+                                    name="ip2"
                                     maxlength="5"
                                     value="{{ $initialIP2 }}"
                                     placeholder="e.g. 3.85"
@@ -78,9 +76,9 @@
 
                         <!-- Reset / Clear Button -->
                         <div class="pt-2 flex gap-3">
-                            <button 
-                                type="button" 
-                                id="btn-reset" 
+                            <button
+                                type="button"
+                                id="btn-reset"
                                 class="w-full py-2.5 rounded-xl border border-slate-200 text-slate-600 font-semibold text-xs hover:bg-slate-100 transition flex items-center justify-center gap-2"
                             >
                                 <i class="fa-solid fa-rotate-left"></i> Reset Inputs
@@ -96,7 +94,7 @@
                             <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:16px_16px]"></div>
 
                             <span class="text-xs uppercase font-bold tracking-wider text-blue-200 mb-1 z-10">Calculated IPK</span>
-                            
+
                             <div class="my-2 z-10">
                                 <span id="result-display" class="text-4xl sm:text-5xl font-extrabold tracking-tight">
                                     {{ $initialResult !== null ? number_format($initialResult, 2) : '0.00' }}
@@ -217,5 +215,4 @@
             });
         });
     </script>
-
-</x-layout>
+@endsection

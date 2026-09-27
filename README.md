@@ -1,4 +1,4 @@
-# PBKK-Tugas-2
+# PBKK-Tugas-4
 
 ## Website Link
 
@@ -7,8 +7,8 @@
 ## Local Setup
 
 ```
-git clone git@github.com:theRadn/PBKK-Tugas-2.git
-cd PBKK-Tugas-2
+git clone git@github.com:theRadn/PBKK-Tugas-4.git
+cd PBKK-Tugas-4
 composer install
 npm install
 cp .env.example .env

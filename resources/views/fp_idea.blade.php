@@ -1,9 +1,8 @@
-<x-layout>
+@extends('layouts.app')
 
-    @include('partials.navbar')
-
+@section('content')
     <section
-        class="relative bg-gradient-to-b from-blue-50/40 via-white to-slate-50 py-16 lg:py-24 overflow-hidden border-b border-slate-200/60">
+        class="relative bg-gradient-to-b from-blue-50/40 via-white to-slate-50 py-16 lg:py-24 overflow-hidden border-b border-slate-200/60 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 dark:border-slate-800">
         <div
             class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-its-accent/10 blur-[140px] rounded-full pointer-events-none -z-10">
         </div>
@@ -11,7 +10,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
 
             <span
-                class="text-xs font-semibold tracking-wider uppercase bg-its-light text-its-accent px-3.5 py-1 rounded-full mb-4">
+                class="text-xs font-semibold tracking-wider uppercase bg-its-light text-its-accent px-3.5 py-1 rounded-full mb-4 dark:bg-slate-800 dark:text-blue-400">
                 Capstone Project Pitch
             </span>
 
@@ -20,15 +19,15 @@
                 MAGENTIC
             </h1>
 
-            <p class="text-xl sm:text-2xl text-slate-500 font-light mb-6 tracking-wide max-w-2xl">
+            <p class="text-xl sm:text-2xl text-slate-500 font-light mb-6 tracking-wide max-w-2xl dark:text-slate-400">
                 The Next Generation of Web-Based Collaborative Development
             </p>
 
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-6">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-6 dark:text-white">
                 MAJESTIC IN EVERY LINE.
             </h2>
 
-            <p class="text-base sm:text-lg text-slate-600 max-w-3xl mb-10 leading-relaxed">
+            <p class="text-base sm:text-lg text-slate-600 max-w-3xl mb-10 leading-relaxed dark:text-slate-300">
                 A collaborative web-based development environment powered by autonomous Agentic AI, seamlessly
                 integrated with GitHub and real-time multiplayer editing.
             </p>
@@ -39,7 +38,7 @@
                     Explore Features
                 </a>
                 <a href="#architecture"
-                    class="px-8 py-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-300 text-slate-700 font-semibold text-center shadow-sm hover:shadow transition duration-200">
+                    class="px-8 py-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-300 text-slate-700 font-semibold text-center shadow-sm hover:shadow transition duration-200 dark:bg-slate-800 dark:border-slate-700 dark:text-slate-300 dark:hover:border-slate-600">
                     View Architecture
                 </a>
             </div>
@@ -173,39 +172,39 @@
         </div>
     </section>
 
-    <section id="problem" class="py-20 lg:py-28 bg-white border-b border-slate-200/80">
+    <section id="problem" class="py-20 lg:py-28 bg-white border-b border-slate-200/80 dark:bg-slate-900 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span
-                    class="text-xs font-semibold tracking-wider text-its-accent uppercase bg-its-light px-3 py-1 rounded-full">Problem
+                    class="text-xs font-semibold tracking-wider text-its-accent uppercase bg-its-light px-3 py-1 rounded-full dark:bg-slate-800 dark:text-blue-400">Problem
                     & Motivation</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3 dark:text-white">
                     A Unified Starting Point for <span class="text-its-accent">Modern Devs</span>
                 </h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                 <article
-                    class="p-8 bg-slate-50 rounded-2xl border border-slate-200/80 hover:border-blue-300 transition duration-300">
+                    class="p-8 bg-slate-50 rounded-2xl border border-slate-200/80 hover:border-blue-300 transition duration-300 dark:bg-slate-800/50 dark:border-slate-700 dark:hover:border-blue-500">
                     <div class="text-5xl font-black text-its-accent mb-4">01</div>
-                    <h3 class="text-xl font-bold mb-2 text-slate-900">Fragmented Workflow</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">Code editors, GitHub repositories, AI assistants,
+                    <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">Fragmented Workflow</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed dark:text-slate-300">Code editors, GitHub repositories, AI assistants,
                         and communication channels live in separate windows, breaking developer focus.</p>
                 </article>
 
                 <article
-                    class="p-8 bg-slate-50 rounded-2xl border border-slate-200/80 hover:border-blue-300 transition duration-300">
+                    class="p-8 bg-slate-50 rounded-2xl border border-slate-200/80 hover:border-blue-300 transition duration-300 dark:bg-slate-800/50 dark:border-slate-700 dark:hover:border-blue-500">
                     <div class="text-5xl font-black text-its-accent mb-4">02</div>
-                    <h3 class="text-xl font-bold mb-2 text-slate-900">Passive AI Assistants</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">Traditional AI wait for manual prompts instead of
+                    <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">Passive AI Assistants</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed dark:text-slate-300">Traditional AI wait for manual prompts instead of
                         actively reasoning about code architecture and proposing proactive pull requests.</p>
                 </article>
 
                 <article
-                    class="p-8 bg-slate-50 rounded-2xl border border-slate-200/80 hover:border-blue-300 transition duration-300">
+                    class="p-8 bg-slate-50 rounded-2xl border border-slate-200/80 hover:border-blue-300 transition duration-300 dark:bg-slate-800/50 dark:border-slate-700 dark:hover:border-blue-500">
                     <div class="text-5xl font-black text-its-accent mb-4">03</div>
-                    <h3 class="text-xl font-bold mb-2 text-slate-900">Complex Setup Friction</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">Setting up matching local environments across
+                    <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">Complex Setup Friction</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed dark:text-slate-300">Setting up matching local environments across
                         team members consumes valuable sprint hours that should be spent writing software.</p>
                 </article>
             </div>
@@ -213,10 +212,10 @@
         </div>
     </section>
 
-    <section class="py-20 lg:py-24 bg-slate-50 border-b border-slate-200/80">
+    <section class="py-20 lg:py-24 bg-slate-50 border-b border-slate-200/80 dark:bg-slate-950 dark:border-slate-800">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">One Workspace for Every Workflow</h2>
-            <p class="text-slate-600 max-w-2xl mx-auto mb-10 text-sm sm:text-base">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4 dark:text-white">One Workspace for Every Workflow</h2>
+            <p class="text-slate-600 max-w-2xl mx-auto mb-10 text-sm sm:text-base dark:text-slate-400">
                 An interconnected architecture linking client-side Monaco Editor, backend Laravel service, GitHub API,
                 and Autonomous Agents.
             </p>
@@ -227,27 +226,27 @@
         </div>
     </section>
 
-    <section id="features" class="py-20 lg:py-28 bg-white border-b border-slate-200/80">
+    <section id="features" class="py-20 lg:py-28 bg-white border-b border-slate-200/80 dark:bg-slate-900 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span
-                    class="text-xs font-semibold tracking-wider text-its-accent uppercase bg-its-light px-3 py-1 rounded-full">Core
+                    class="text-xs font-semibold tracking-wider text-its-accent uppercase bg-its-light px-3 py-1 rounded-full dark:bg-slate-800 dark:text-blue-400">Core
                     Capabilities</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">Key Features</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3 dark:text-white">Key Features</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div
-                    class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:shadow-lg transition duration-300">
+                    class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:shadow-lg transition duration-300 dark:bg-slate-800/50 dark:border-slate-700 dark:hover:border-blue-500">
                     <div
-                        class="w-14 h-14 bg-its-light text-its-accent rounded-xl flex items-center justify-center text-2xl mb-6">
+                        class="w-14 h-14 bg-its-light text-its-accent rounded-xl flex items-center justify-center text-2xl mb-6 dark:bg-slate-800 dark:text-blue-400">
                         <i class="fa-solid fa-robot"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-3">Agentic AI Engine</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">AI that doesn't just answer questions — it
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3 dark:text-white">Agentic AI Engine</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6 dark:text-slate-300">AI that doesn't just answer questions — it
                         analyzes codebase context, reasons through issues, and generates multi-file edits automatically.
                     </p>
-                    <ul class="space-y-2 text-xs font-semibold text-slate-700">
+                    <ul class="space-y-2 text-xs font-semibold text-slate-700 dark:text-slate-300">
                         <li class="flex items-center gap-2"><i class="fa-solid fa-check text-its-accent"></i> Codebase
                             contextual reasoning</li>
                         <li class="flex items-center gap-2"><i class="fa-solid fa-check text-its-accent"></i>
@@ -258,15 +257,15 @@
                 </div>
 
                 <div
-                    class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:shadow-lg transition duration-300">
+                    class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:shadow-lg transition duration-300 dark:bg-slate-800/50 dark:border-slate-700 dark:hover:border-blue-500">
                     <div
-                        class="w-14 h-14 bg-blue-100 text-its-accent rounded-xl flex items-center justify-center text-2xl mb-6">
+                        class="w-14 h-14 bg-blue-100 text-its-accent rounded-xl flex items-center justify-center text-2xl mb-6 dark:bg-slate-800 dark:text-blue-400">
                         <i class="fa-brands fa-github"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-3">GitHub Integration</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">Seamlessly connect projects with GitHub
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3 dark:text-white">GitHub Integration</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6 dark:text-slate-300">Seamlessly connect projects with GitHub
                         repositories directly from the browser without needing complex local Git setups.</p>
-                    <ul class="space-y-2 text-xs font-semibold text-slate-700">
+                    <ul class="space-y-2 text-xs font-semibold text-slate-700 dark:text-slate-300">
                         <li class="flex items-center gap-2"><i class="fa-solid fa-check text-its-accent"></i> Visual
                             Clone, Commit & Push</li>
                         <li class="flex items-center gap-2"><i class="fa-solid fa-check text-its-accent"></i> Branch &
@@ -277,39 +276,39 @@
                 </div>
 
                 <div
-                    class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-amber-300 hover:shadow-lg transition duration-300">
+                    class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-amber-300 hover:shadow-lg transition duration-300 dark:bg-slate-800/50 dark:border-slate-700 dark:hover:border-amber-500">
                     <div
-                        class="w-14 h-14 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        class="w-14 h-14 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-2xl mb-6 dark:bg-slate-800 dark:text-amber-400">
                         <i class="fa-solid fa-users"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-3">Real-Time Multiplayer</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">Work on the exact same codebase with your
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3 dark:text-white">Real-Time Multiplayer</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6 dark:text-slate-300">Work on the exact same codebase with your
                         team members simultaneously, complete with live presence cursors.</p>
-                    <ul class="space-y-2 text-xs font-semibold text-slate-700">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600"></i>
+                    <ul class="space-y-2 text-xs font-semibold text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600 dark:text-amber-400"></i>
                             Multi-user live cursor sync</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600"></i> WebSocket
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600 dark:text-amber-400"></i> WebSocket
                             broadcast via Laravel Reverb</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600"></i> Shared
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600 dark:text-amber-400"></i> Shared
                             state preservation</li>
                     </ul>
                 </div>
 
                 <div
-                    class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-purple-300 hover:shadow-lg transition duration-300">
+                    class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-purple-300 hover:shadow-lg transition duration-300 dark:bg-slate-800/50 dark:border-slate-700 dark:hover:border-purple-500">
                     <div
-                        class="w-14 h-14 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        class="w-14 h-14 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-2xl mb-6 dark:bg-slate-800 dark:text-purple-400">
                         <i class="fa-solid fa-laptop-code"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-3">Monaco Web IDE</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">A familiar VS Code-like editing experience
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3 dark:text-white">Monaco Web IDE</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6 dark:text-slate-300">A familiar VS Code-like editing experience
                         running in the browser with full syntax highlighting and keyboard shortcuts.</p>
-                    <ul class="space-y-2 text-xs font-semibold text-slate-700">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-600"></i> Full
+                    <ul class="space-y-2 text-xs font-semibold text-slate-700 dark:text-slate-300">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-600 dark:text-purple-400"></i> Full
                             file tree explorer</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-600"></i>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-600 dark:text-purple-400"></i>
                             Multi-tab editing</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-600"></i>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-600 dark:text-purple-400"></i>
                             In-browser terminal output</li>
                     </ul>
                 </div>
@@ -317,16 +316,16 @@
         </div>
     </section>
 
-    <section id="agent" class="py-20 lg:py-28 bg-slate-50 text-slate-900 border-b border-slate-200/80">
+    <section id="agent" class="py-20 lg:py-28 bg-slate-50 text-slate-900 border-b border-slate-200/80 dark:bg-slate-950 dark:text-white dark:border-slate-800">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-14">
                 <span
-                    class="text-xs font-semibold tracking-wider text-its-accent uppercase bg-its-light px-3 py-1 rounded-full">Autonomous
+                    class="text-xs font-semibold tracking-wider text-its-accent uppercase bg-its-light px-3 py-1 rounded-full dark:bg-slate-800 dark:text-blue-400">Autonomous
                     Loop</span>
-                <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mt-3">
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mt-3 dark:text-white">
                     Not Just Any Assistant.
                 </h2>
-                <p class="text-slate-600 mt-3 text-sm sm:text-base">
+                <p class="text-slate-600 mt-3 text-sm sm:text-base dark:text-slate-400">
                     Unlike static prompt-response chat models, Magentic AI executes a systematic loop: analyze, plan,
                     execute, and verify.
                 </p>
@@ -377,44 +376,44 @@
         </div>
     </section>
 
-    <section id="architecture" class="py-20 lg:py-28 bg-white">
+    <section id="architecture" class="py-20 lg:py-28 bg-white dark:bg-slate-900">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14">
                 <span
-                    class="text-xs font-semibold tracking-wider text-its-accent uppercase bg-its-light px-3 py-1 rounded-full">Implementation</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">Built With Modern
+                    class="text-xs font-semibold tracking-wider text-its-accent uppercase bg-its-light px-3 py-1 rounded-full dark:bg-slate-800 dark:text-blue-400">Implementation</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3 dark:text-white">Built With Modern
                     Stack</h2>
             </div>
 
             <div class="space-y-3">
                 <div
-                    class="p-5 bg-slate-50 rounded-xl border border-slate-200 flex flex-col sm:flex-row sm:items-center gap-4 hover:border-slate-300 transition">
-                    <div class="w-32 font-bold text-slate-400 uppercase tracking-widest text-xs">Frontend</div>
-                    <div class="text-slate-800 font-semibold text-base">Monaco Editor, JavaScript, Tailwind CSS</div>
+                    class="p-5 bg-slate-50 rounded-xl border border-slate-200 flex flex-col sm:flex-row sm:items-center gap-4 hover:border-slate-300 transition dark:bg-slate-800/50 dark:border-slate-700 dark:hover:border-slate-600">
+                    <div class="w-32 font-bold text-slate-400 uppercase tracking-widest text-xs dark:text-slate-400">Frontend</div>
+                    <div class="text-slate-800 font-semibold text-base dark:text-slate-200">Monaco Editor, JavaScript, Tailwind CSS</div>
                 </div>
 
                 <div
-                    class="p-5 bg-slate-50 rounded-xl border border-slate-200 flex flex-col sm:flex-row sm:items-center gap-4 hover:border-slate-300 transition">
-                    <div class="w-32 font-bold text-slate-400 uppercase tracking-widest text-xs">Backend</div>
-                    <div class="text-slate-800 font-semibold text-base">Laravel 11+ / PHP 8.4 / MySQL</div>
+                    class="p-5 bg-slate-50 rounded-xl border border-slate-200 flex flex-col sm:flex-row sm:items-center gap-4 hover:border-slate-300 transition dark:bg-slate-800/50 dark:border-slate-700 dark:hover:border-slate-600">
+                    <div class="w-32 font-bold text-slate-400 uppercase tracking-widest text-xs dark:text-slate-400">Backend</div>
+                    <div class="text-slate-800 font-semibold text-base dark:text-slate-200">Laravel 11+ / PHP 8.4 / MySQL</div>
                 </div>
 
                 <div
-                    class="p-5 bg-slate-50 rounded-xl border border-slate-200 flex flex-col sm:flex-row sm:items-center gap-4 hover:border-slate-300 transition">
-                    <div class="w-32 font-bold text-slate-400 uppercase tracking-widest text-xs">AI Core</div>
-                    <div class="text-slate-800 font-semibold text-base">Custom Agentic Framework + LLM API</div>
+                    class="p-5 bg-slate-50 rounded-xl border border-slate-200 flex flex-col sm:flex-row sm:items-center gap-4 hover:border-slate-300 transition dark:bg-slate-800/50 dark:border-slate-700 dark:hover:border-slate-600">
+                    <div class="w-32 font-bold text-slate-400 uppercase tracking-widest text-xs dark:text-slate-400">AI Core</div>
+                    <div class="text-slate-800 font-semibold text-base dark:text-slate-200">Custom Agentic Framework + LLM API</div>
                 </div>
 
                 <div
-                    class="p-5 bg-slate-50 rounded-xl border border-slate-200 flex flex-col sm:flex-row sm:items-center gap-4 hover:border-slate-300 transition">
-                    <div class="w-32 font-bold text-slate-400 uppercase tracking-widest text-xs">Integration</div>
-                    <div class="text-slate-800 font-semibold text-base">GitHub REST &amp; GraphQL API</div>
+                    class="p-5 bg-slate-50 rounded-xl border border-slate-200 flex flex-col sm:flex-row sm:items-center gap-4 hover:border-slate-300 transition dark:bg-slate-800/50 dark:border-slate-700 dark:hover:border-slate-600">
+                    <div class="w-32 font-bold text-slate-400 uppercase tracking-widest text-xs dark:text-slate-400">Integration</div>
+                    <div class="text-slate-800 font-semibold text-base dark:text-slate-200">GitHub REST &amp; GraphQL API</div>
                 </div>
 
                 <div
-                    class="p-5 bg-slate-50 rounded-xl border border-slate-200 flex flex-col sm:flex-row sm:items-center gap-4 hover:border-slate-300 transition">
-                    <div class="w-32 font-bold text-slate-400 uppercase tracking-widest text-xs">Realtime</div>
-                    <div class="text-slate-800 font-semibold text-base">WebSockets / Laravel Reverb</div>
+                    class="p-5 bg-slate-50 rounded-xl border border-slate-200 flex flex-col sm:flex-row sm:items-center gap-4 hover:border-slate-300 transition dark:bg-slate-800/50 dark:border-slate-700 dark:hover:border-slate-600">
+                    <div class="w-32 font-bold text-slate-400 uppercase tracking-widest text-xs dark:text-slate-400">Realtime</div>
+                    <div class="text-slate-800 font-semibold text-base dark:text-slate-200">WebSockets / Laravel Reverb</div>
                 </div>
             </div>
         </div>
@@ -527,7 +526,4 @@
             });
         });
     </script>
-
-    @include('partials.footer')
-
-</x-layout>
+@endsection

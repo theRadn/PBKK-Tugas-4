@@ -2,37 +2,40 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+
 class PageController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return view('home');
+        $welcomeUser = $request->query('user');
+
+        return view('home', compact('welcomeUser'));
     }
 
-    public function agent($tema = 'General Assistant Agent')
+    public function agent()
     {
-        $lowercaseTema = strtolower($tema);
-        $codingAliases = ['coding', 'coding assistant', 'coding assistant agent', 'coding-assistant', 'coding-assistant-agent', 'coding_assistant', 'coding_assistant_agent'];
-
-        $isCoding = in_array($lowercaseTema, $codingAliases);
-
-        $nextTema = $isCoding ? 'General Assistant Agent' : 'Coding Assistant Agent';
-
-        if ($isCoding) {
-            return view('fp_idea', [
-                'tema' => $tema,
-                'nextTema' => $nextTema,
-            ]);
-        }
-
-        return view('agent', [
-            'tema' => $tema,
-            'nextTema' => $nextTema,
-        ]);
+        return view('fp_idea');
     }
 
-    public function mahasiswaDetail($nrp)
+    public function mahasiswaDetail()
     {
+        $nrp = '5025241104';
         return view('mahasiswa', compact('nrp'));
+    }
+
+    public function store(Request $request)
+    {
+        $validated = $request->validate([
+            'name'    => 'required|string|max:255',
+            'nrp'     => 'required|string|max:50',
+            'fp-idea' => 'required|string|max:1000',
+        ]);
+
+        return redirect()->back()->with('success_data', [
+            'name' => $validated['name'],
+            'nrp'  => $validated['nrp'],
+            'idea' => $validated['fp-idea'],
+        ]);
     }
 }
