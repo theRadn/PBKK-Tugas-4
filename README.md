@@ -19,8 +19,9 @@ composer run dev
 
 ## Routes list
 - `/` home page <br>
-- `/agent/{tema?}` agent page <br>
-- `/mahasiswa/{nrp 10 digit}` student profile page <br>
-- `/hitung-ipk/{ip1?}/{ip2?}` ipk calculator <br>
-- `/dashboard/mahasiswa/{nrp 10 digit}` student profile page but using dashboard prefix <br>
-- `/dashboard/` home page but using dashboard prefix <br>
+- `/?mode={dark | light}` change to dark / light theme <br>
+- `/beranda` home page <br>
+- `/beranda?user={name}` home page with greeting notification <br>
+- `/ide-agent` agent idea page <br>
+- `/profil-mahasiswa` student detail page <br>
+- `POST /agent/idea` send agent idea <br>
