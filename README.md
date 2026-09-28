@@ -12,7 +12,7 @@ cd PBKK-Tugas-4
 composer install
 npm install
 cp .env.example .env
-php key:generate
+php artisan key:generate
 php artisan migrate
 composer run dev
 ```
